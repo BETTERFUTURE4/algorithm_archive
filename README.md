@@ -22,3 +22,9 @@
   * printTriangle() : 
     * 파라미터 : 정수형 height
     * 출력 : 높이 height인 '직각 이등변 삼각형' println
+### 6. 피라미드 그리기
+* Main : 메인 클래스
+* ShapePrinter
+  * printPyramid() :
+    * 파라미터 : 정수형 height
+    * 출력 : 높이 height인  '피라미드' println
