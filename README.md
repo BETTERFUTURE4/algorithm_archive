@@ -8,3 +8,11 @@
 #### 2. 특가할인매장
 * Main : 메인 클래스
 * MarketGood : 매장 제품의 가격정보를 담은 클래스
+#### 3. 평균값 계산기
+* Main : 메인 클래스
+* AverageFinder
+  * computeAverage : 파라미터로 정수 배열 intArray를 받고 배열의 모든 값의 평균을 리턴
+#### 4. 두 원소의 차 중 최댓값 구하기
+* Main : 메인 클래스
+* GreatestDifferenceFinder
+  * greatestDifference : 두 원소의 차이 중 가장 큰 값을 리턴해주는 메소드
