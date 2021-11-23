@@ -137,3 +137,22 @@
   * (9) private int getRowIndex(char uppercaseChar)
     * 영화관 행을 그에 해당하는 정수로 변환하는 메소드입니다. 
     * 예를들어 'A'는 0, 'D'는 3으로 변환해줍니다. 
+### 14. 학점 계산기
+* Main : 메인 클래스
+* GradeCalculator
+  * (0) name, grade,courseArray,credit
+  * (1) GradeCalculator(name, grade,credit)
+    * 생성자
+  * (2) addCourse(Course c)
+    * courseArray에 값 추가
+  * (3) print()
+    * 직전 학기 성적: 4.0 (총 100학점)
+    * 이번 학기 성적: 4.1071428571 (총 14학점)
+    * 전체 예상 학점: 4.0131578947 (총 114학점)
+* Course
+  * (0) name, gradeDictionary, grade, credit, CREDIT_MAJOR = 3, CREDIT_GENERAL = 2
+  * (1) Course(String name, int credit , String gradeChar)
+    * 생성자
+    * 이름 저장
+    * gradeChar -> grade 변환 (gradeDictionary 사용)
+    * credit 생성
