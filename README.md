@@ -69,3 +69,19 @@
   * find() :
     * 파라미터 : String 영단어
     * 출력 : String 한글단어
+### 12. 포겟몬GO
+* Main : 메인 클래스
+* PokeBag
+  * (1) private final 자료형 pokemons = new 자료형();
+    * HashMap 강의에서 만들었던 PokeDex에서는 한 마리의 마릴 인스턴스만 담을 수 있었죠? 
+    * PokeBag에서는 마릴이라는 key 하나에 여러 마리의 마릴 인스턴스를 담을 수 있습니다. 
+    * 이 상황에 적합한 자료형을 생각해 봅시다.
+  * (2) public ArrayList<Pokemon> getPokemons(String name)
+    * name 이름을 갖고 있는 포켓몬을 모두 가져오는 메소드입니다.
+  * (3) public void add(Pokemon pokemon)
+    * 과정 (1)에서 구현한 pokemons에 Pokemon을 넣는 메소드입니다.
+  * (4) public Pokemon getStrongest(String name)
+    * name 이름의 포켓몬 중 가장 강한(cp가 가장 큰) 포켓몬을 가져오는 메소드입니다.
+  * (5) public Pokemon getStrongest()
+    * 내가 가진 모든 포켓몬 중 가장 강한 포켓몬을 가져오는 메소드입니다. 
+    * 내부적으로 (4)번 메소드를 호출하도록 구현해보세요.
