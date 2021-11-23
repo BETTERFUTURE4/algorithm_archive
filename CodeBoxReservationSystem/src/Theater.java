@@ -1,6 +1,22 @@
 public class Theater {
 
-    // 여기에 코드를 작성하세요.
+    // 전체 좌석을 표현하는 2차원 Seat 배열입니다.
+    private Seat[][] seats;
+    // 전체 좌석의 행(row)과 열(col)의 수를 담는 변수입니다.
+    private int rowCount, colCount;
+
+    public Theater(int rowCount, int colCount) {
+        this.rowCount = rowCount;
+        this.colCount = colCount;
+        seats = new Seat[this.rowCount][this.colCount];
+
+        // 인스턴스들로 배열을 채워줍니다.
+        for (int row = 0; row < this.rowCount; row++) {
+            for (int col = 0; col < this.colCount; col++) {
+                seats[row][col] = new Seat();
+            }
+        }
+    }
 
     public void printSeatMatrix() {
         System.out.print("  ");
