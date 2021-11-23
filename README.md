@@ -69,7 +69,7 @@
   * find() :
     * 파라미터 : String 영단어
     * 출력 : String 한글단어
-### 12. 포겟몬GO
+### 12. 포켓몬GO
 * Main : 메인 클래스
 * PokeBag
   * (1) private final 자료형 pokemons = new 자료형();
@@ -85,3 +85,36 @@
   * (5) public Pokemon getStrongest()
     * 내가 가진 모든 포켓몬 중 가장 강한 포켓몬을 가져오는 메소드입니다. 
     * 내부적으로 (4)번 메소드를 호출하도록 구현해보세요.
+### 13. 영화관 '코드박스' 예약 시스템 pt. 1
+* Main : 메인 클래스
+* Seat
+  * (1) private String name
+    * 예약자 이름을 담습니다.
+  * (2) public String getName()
+    * 예약자 이름을 리턴합니다.
+  * (3) public void reserve(String name)
+    * 예약자 이름을 설정해줍니다.
+  * (4) public void cancel()
+    * 예약자 이름을 없애줍니다. 
+    * name을 다시 null로 설정하는 것이죠!
+  * (5) public boolean isOccupied()
+    * 이미 예약된 자리인지 불린값을 리턴해줍니다.
+  * (6) public boolean match(String checkName)
+    * checkName이라는 이름으로 예약된 자리인지 확인하고, 
+    * 불린값을 리턴해줍니다.
+* Theater
+  * (1) private Seat[][] seats;
+    * 전체 좌석을 표현하는 2차원 Seat 배열입니다.
+  * (2) private int rowCount, colCount;
+    * 전체 좌석의 행(row)과 열(col)의 수를 담는 변수입니다.
+  * (3) public Theater(int rowCount, int colCount)
+    * Theater 클래스의 생성자입니다. 
+    * 파라미터로 받은 열과 행의 수에 해당하는 2차원 배열을 만들고, 
+    * Seat 클래스의 인스턴스들로 배열을 채워줍니다. 
+    * 모든 Seat 인스턴스는 서로 달라야 합니다. 
+    * 총 rowCount * colCount개의 인스턴스가 필요하겠죠?
+    * 또, 파라미터로 받은 변수들의 값을 
+    * 각각 동일한 이름의 내부 인스턴스 변수에 넣어줍니다. 
+    * 예를 들어서 rowCount는 this.rowCount에 넣어줘야 하겠죠?
+  * (4) public void printSeatMatrix()
+    * 좌석 정보를 출력하는 메소드입니다.
