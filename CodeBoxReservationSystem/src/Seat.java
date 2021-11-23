@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class Seat {
+public class Seat {
+    // 여기에 코드를 작성하세요.
 }
