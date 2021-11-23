@@ -6,16 +6,23 @@ public class Theater {
     private int rowCount, colCount;
 
     public Theater(int rowCount, int colCount) {
-        this.rowCount = rowCount;
-        this.colCount = colCount;
-        seats = new Seat[this.rowCount][this.colCount];
+        // 알파벳은 26개만 존재
+        if (rowCount > 26) {
+            rowCount = 26; // number of alphabets
+        }
+
+        seats = new Seat[rowCount][colCount];
 
         // 인스턴스들로 배열을 채워줍니다.
-        for (int row = 0; row < this.rowCount; row++) {
-            for (int col = 0; col < this.colCount; col++) {
+        for (int row = 0; row < rowCount; row++) {
+            for (int col = 0; col < colCount; col++) {
                 seats[row][col] = new Seat();
             }
         }
+
+        this.rowCount = rowCount;
+        this.colCount = colCount;
+
     }
 
     public void printSeatMatrix() {
