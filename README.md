@@ -118,3 +118,22 @@
     * 예를 들어서 rowCount는 this.rowCount에 넣어줘야 하겠죠?
   * (4) public void printSeatMatrix()
     * 좌석 정보를 출력하는 메소드입니다.
+  * (5) public boolean reserve(String name, char rowChar, int col, int numSeat)
+    * 예약 정보(이름, 열, 행, 예약 좌석 수)를 파라미터로 받아 
+    * 예약하는 메소드입니다.
+    * 입력받은 rowChar를 배열의 index로 사용하기 위해  
+    * getRowIndex 메소드를 이용하세요!
+  * (6) public int cancel(String name)
+    * 이름 name으로 예약된 자리를 취소하고, 
+    * 취소된 좌석의 수를 리턴합니다. 
+  * (7) public int cancel(char rowChar, int col, int numSeat)
+    * 메소드 오버로딩으로 구현한 또 다른 cancel 메소드입니다. 
+    * 이번에는 파라미터로 받는 '열', '행', '좌석 수'에 해당되는 
+    * 모든 좌석의 예약을 취소합니다. 
+    * 그리고 위의 cancel 메소드와 마찬가지로 
+    * 총 취소된 좌석 수를 리턴합니다.
+  * (8) public int getNumberOfReservedSeat()
+    * 예약된 모든 좌석 수를 리턴하는 메소드입니다.
+  * (9) private int getRowIndex(char uppercaseChar)
+    * 영화관 행을 그에 해당하는 정수로 변환하는 메소드입니다. 
+    * 예를들어 'A'는 0, 'D'는 3으로 변환해줍니다. 
