@@ -156,3 +156,8 @@
     * 이름 저장
     * gradeChar -> grade 변환 (gradeDictionary 사용)
     * credit 생성
+### 15. MP3 플레이리스트
+1. 앨범
+2. 노래
+3. 아티스트
+4. 메인클래스로 각각 값 저장, 값 얻기
