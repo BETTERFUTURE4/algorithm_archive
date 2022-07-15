@@ -39,25 +39,20 @@ def 차이(arr):
         ssun += a[1]
     return(abs(sin-ssun))
 
-def 튜플리스트로(arr) :
+def 튜플들을_리스트들로(arr) :
     result = list()
     for a in arr:
         result.append(list(a))
     return result
 
 재료개수 = int(input())
-arr = list()
-for i in range(재료개수):
-    신맛, 쓴맛 = map(int, input().split())
-    arr.append([신맛, 쓴맛])
-
-arr.sort(key=lambda x:x[0])
+arr = [list(map(int, input().split())) for i in range(재료개수)]
 
 comb = list()
 
 for i in range(1,재료개수+1):
-    조합 = list(튜플리스트로(combinations(arr,i)))
-    for zo in 조합:
+    해당_재료개수_조합들 = 튜플들을_리스트들로(combinations(arr,i))
+    for zo in 해당_재료개수_조합들:
         comb.append(차이(zo))
 
 print(min(comb))
