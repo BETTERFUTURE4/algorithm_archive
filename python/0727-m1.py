@@ -30,23 +30,36 @@
 # name	return
 # "JEROEN"	56
 # "JAN"	23
+
 def a연속개수(word):
     countArr = [0]
-    for i, alpa in enumerate(word[1:]):
+    for i, alpa in enumerate(word):
         if alpa == "A" and word[i-1] == "A":
             countArr[-1] += 1
         elif alpa == "A":
             countArr.append(1)
-    # print(countArr)
     return max(countArr)
 
-word = list(input())
-이동회수 = 0
-# print(word)
-for i, alpa in enumerate(word):
-    해당단어_이동회수 = min(ord("Z")-ord(alpa) + 1, ord(alpa)-ord("A"))
-    # print(해당단어_이동회수)
-    이동회수 += 해당단어_이동회수
-이동회수 += len(word)-a연속개수(word)
-print(이동회수-1)
-    
+def minlr(word):
+    blockarr = list()
+    acount = a연속개수(word)
+    to8 = "A"*acount
+    wi = word.index(to8)
+
+    blockWord = word[:wi]+ "*"+ word[wi+acount:]
+
+    print("blockWord",blockWord)
+
+    Aindex = blockWord.index("*")
+    lr = (len(blockWord) - Aindex) * 2 + Aindex
+    rl = Aindex * 2 + (len(blockWord) - Aindex)
+    print(len(word),lr,rl)
+    return min(len(word)-1, lr, rl)
+
+def solution(word):
+    updowns = 0
+    print(word)
+    for i, alpa in enumerate(word):
+        updown = min(ord("Z")-ord(alpa) + 1, ord(alpa)-ord("A"))
+        updowns += updown 
+    return updowns + minlr(word)
