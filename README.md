@@ -9,4 +9,5 @@
 
 ## 추가 링크
 
-문제풀이 블로그 : https://betterfuture4.tistory.com
+- 문제풀이 블로그 : https://betterfuture4.tistory.com
+- 스터디 노션 : https://magical-tick-0a1.notion.site/b092d095fa454c13b7abc0c2c5f99ec2
